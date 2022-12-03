@@ -1,0 +1,26 @@
+<head>
+<style>
+span {
+    display: inline-block;
+    width: 200px;
+}
+span.name {
+    font-weight: bold;
+}
+span.long {
+    width: 400px;
+}
+</style>
+</head>
+<body>
+    <h1>{{.PageTitle}}</h1>
+    Hello, you have requested {{.UrlPath}}<br /><br />
+
+    <ul>
+        {{range .Peoples}}
+        <li>
+            <span class="long">{{.Id}}</span> <span class="name">{{.Name}}</span> <span>{{.Age}}</span>
+        </li>
+        {{end}}
+    </ul>
+</body>
